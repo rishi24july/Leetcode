@@ -9,24 +9,8 @@
  * }
  */
 class Solution {
-    public ListNode reverseList(ListNode head) {
-        if(head==null||head.next==null) return head;
-                ListNode t1=null;
-        ListNode t2=head;
-       ListNode t3=head.next;
-      while(t2!=null){
-          t2.next=t1;
-        t1=t2;
-        t2=t3;
-       if(t3!=null) t3=t3.next;
-      } 
-      return t1;
-    }
-    
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        // l1=reverseList(l1);
-        //  l2=reverseList(l2);
-         
+        
          ListNode t1=l1;
          ListNode t2=l2;
         ListNode dummy = new ListNode(0);
