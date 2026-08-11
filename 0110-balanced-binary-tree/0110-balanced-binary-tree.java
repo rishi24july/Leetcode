@@ -25,7 +25,10 @@ class Solution {
           if(root==null) return 0;
             int leftLevels=levels(root.left);
         int rightLevels=levels(root.right);
-          if(Math.abs(leftLevels-rightLevels)>1) flag=false;
+          if(Math.abs(leftLevels-rightLevels)>1) {
+            flag=false;
+            return 0;
+          }
         return 1+Math.max(leftLevels,rightLevels);
     }
 }
