@@ -1,9 +1,9 @@
 class Solution {
     public int findMin(int[] nums) {
-      PriorityQueue<Integer> pq=new PriorityQueue<>();
-      for (int ele:nums){
-        pq.add(ele);
-      }
-      return pq.peek();
+    int min=nums[0];
+    for(int i=1;i<nums.length;i++){
+        min=Math.min(min,nums[i]);
+    }
+    return min;
     }
 }
